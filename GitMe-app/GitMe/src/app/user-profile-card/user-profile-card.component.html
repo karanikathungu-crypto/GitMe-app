@@ -1,1 +1,10 @@
-<p>user-profile-card works!</p>
+<div class="card" style="width: 18rem;" id="cardd">
+    <img [src] = "username.avatar_url" class="card-img-top" class="img-fluid" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{username.name}}</h5>
+      <p class="card-text">{{username.bio}}</p>
+      <a [href]="username.html_url" target="_blank" class="btn btn-outline-info">View profile</a>
+    </div>
+</div>
+
+
