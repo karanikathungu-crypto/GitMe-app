@@ -10,6 +10,8 @@ import { DisplayFormComponent } from './display-form/display-form.component';
 import { NavDisplayComponent } from './nav-display/nav-display.component';
 import { ContactComponent } from './contact/contact.component';
 import { GithubService } from './github-service/github.service';
+import { RepositoryComponent } from './repository/repository.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { GithubService } from './github-service/github.service';
     DisplayComponent,
     DisplayFormComponent,
     NavDisplayComponent,
-    ContactComponent
+    ContactComponent,
+    RepositoryComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
