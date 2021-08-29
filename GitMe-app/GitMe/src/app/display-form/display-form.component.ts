@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Username } from '../username';
 import { Repository } from '../repository';
+import { GithubService } from '../github-service/github.service';
 
 @Component({
   selector: 'app-display-form',
@@ -9,12 +10,19 @@ import { Repository } from '../repository';
 })
 export class DisplayFormComponent implements OnInit {
 
+  public userQuery: any;
   public username: any;
   public repository: any;//any[]
   public errorMessage: any;
 
-  constructor() { }
-  public searchUsername(){}
+  constructor(private githubService:GithubService) { }
+  public searchUsername(){
+    this.githubService.getUserprofile(this.userQuery).subscribe(data=>{
+      this.username = data;
+    }, (error) => {
+      this.errorMessage = error;
+    }) 
+  }
 
   ngOnInit(): void {
   }
