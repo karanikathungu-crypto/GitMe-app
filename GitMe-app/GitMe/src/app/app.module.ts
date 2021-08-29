@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { GithubService } from './github-service/github.service';
 import { RepositoryComponent } from './repository/repository.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileCardComponent } from './user-profile-card/user-profile-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     NavDisplayComponent,
     ContactComponent,
     RepositoryComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserProfileCardComponent
   ],
   imports: [
     BrowserModule,
