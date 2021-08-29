@@ -8,6 +8,7 @@ import { DisplayComponent } from './display/display.component';
 import { DisplayFormComponent } from './display-form/display-form.component';
 import { NavDisplayComponent } from './nav-display/nav-display.component';
 import { ContactComponent } from './contact/contact.component';
+import { GithubService } from './github-service/github.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
