@@ -10,7 +10,8 @@ import { Repository } from '../repository';
 export class DisplayFormComponent implements OnInit {
 
   public username: any;
-  public repository: any;
+  public repository: any;//any[]
+  public errorMessage: any;
 
   constructor() { }
   public searchUsername(){}

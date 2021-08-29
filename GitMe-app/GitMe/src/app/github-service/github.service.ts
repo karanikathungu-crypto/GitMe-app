@@ -21,13 +21,23 @@ export class GithubService {
     //   }
     // }
 
-  public getUserprofile(searchQuery:any):Observable<any>{
+  public getUserprofile(searchQuery:any):Observable<any[]>{
     let dataURL = `https://api.github.com/users/${searchQuery}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
-    return this.httpClient.get(dataURL).pipe
+    return this.httpClient.get<any>(dataURL).pipe
     (retry(1),
     catchError(this.handleError)
-  );
-}
+   );
+  }
+
+  public getRepositories(searchQuery:any):Observable<any[]>{
+    let dataURL = `https://api.github.com/users/${searchQuery}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
+    return this.httpClient.get<any>(dataURL).pipe
+    (retry(1),
+    catchError(this.handleError)
+   );
+  }
+
+
   public handleError(error:HttpErrorResponse){
     let errorMessage: string;
     if(error.error instanceof ErrorEvent){
