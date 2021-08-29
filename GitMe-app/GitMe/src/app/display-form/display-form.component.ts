@@ -16,12 +16,18 @@ export class DisplayFormComponent implements OnInit {
   public errorMessage: any;
 
   constructor(private githubService:GithubService) { }
+
   public searchUsername(){
     this.githubService.getUserprofile(this.userQuery).subscribe(data=>{
       this.username = data;
     }, (error) => {
       this.errorMessage = error;
     }) 
+    this.githubService.getRepositories(this.userQuery).subscribe(data=>{
+      this.repository = data;
+    }, (error) =>{
+      this.errorMessage = error;
+    });
   }
 
   ngOnInit(): void {
