@@ -1,15 +1,14 @@
 <div class="container mt-4">
-  <form>
+  <form class = "form-inline" (submit)="searchUsername()">
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="text">
+      <input type="text" name="user" [(ngModel)]="username" class="form-control" id="floatingInput" placeholder="text">
       <label for="floatingInput">Github username</label>
-      <button type="button" class="btn btn-outline-info">Search</button>
+      <button type="button" type ="submit" value = "submit" class="btn btn-outline-info">Search</button>
     </div>
-
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="text">
+      <input type="text" name = "repository" [(ngModel)]="repository" class="form-control" id="floatingInput" placeholder="text">
       <label for="floatingInput">Github repository</label>
-      <button type="button" class="btn btn-outline-info">Search</button>
+      <button type="button" type = "submit" value = "submit" class="btn btn-outline-info">Search</button>
     </div>
   </form>
 </div>
