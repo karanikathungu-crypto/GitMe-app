@@ -1,11 +1,11 @@
- <div class = "container-fluid" id="repos">
+ <div *ngIf="repository" class = "container-fluid" id="repos">
   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
     <div class="card-header">GitHub repositories</div>
     <div class="card-body">
       <ul class = "list-group">
-        <li class = "list-group-item">
+        <li *ngFor="let repo of repository" class = "list-group-item">
           <h3>
-            <a href = "/" class = "text-primary" target="_blank"><span class = "repo">Repo link</span></a>
+            <a [href]= "repo.html_url" class = "text-primary" target="_blank"><span class = "repo">{{repo.name}}</span></a>
           </h3>
         </li>
       </ul>
