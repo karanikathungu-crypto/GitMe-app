@@ -1,4 +1,4 @@
-#GitMe Application
+# GitMe Application
 ## Author
 Kenneth Kathungu
 ## Project Description
@@ -7,7 +7,7 @@ This is an angular application which allows a user to search for usernames exist
 The project utilized typescript programming langauge, custom stylesheets and Bootstrap for styling and HTML as the markup language.
 
 ### Link to the project view
-
+https://karanikathungu-crypto.github.io/GitMe-app/
 ### License used
 MIT license
 
