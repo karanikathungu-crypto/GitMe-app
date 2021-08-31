@@ -13,7 +13,7 @@
       <li class="list-group-item">Location:{{username.Location}}</li>
       <li class="list-group-item">Email:{{username.Email}}</li>
       <li class="list-group-item">Company:{{username.Company}}</li>
-      <li class="list-group-item">Member since:{{username.created_at|date}}</li>
+      <li class="list-group-item">Member since:{{username.created_at|dateCount}}</li>
       <li class="list-group-item">Profile URL:
         <a [href]="username.html_url" target = "_blank">{{username.html_url}}</a></li>
     </ul>

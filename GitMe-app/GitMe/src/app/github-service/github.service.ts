@@ -5,7 +5,7 @@ import { retry, catchError} from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Username } from '../username';
 import { Repository } from '../repository';
-import { AuthorizationDetails, CLIENT_ID, CLIENT_SECRET } from '../authorization-details';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,11 @@ export class GithubService {
     //     repository: string;
     //   }
     // }
+    
 
   public getUserprofile(searchQuery:any):Observable<any[]>{
-    let dataURL = `https://api.github.com/users/${searchQuery}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
+   
+    let dataURL = `https://api.github.com/users/${searchQuery}?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRET}`;
     return this.httpClient.get<any>(dataURL).pipe
     (retry(1),
     catchError(this.handleError)
@@ -30,7 +32,8 @@ export class GithubService {
   }
 
   public getRepositories(searchQuery:any):Observable<any[]>{
-    let dataURL = `https://api.github.com/users/${searchQuery}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
+    
+    let dataURL = `https://api.github.com/users/${searchQuery}/repos?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRET}`;
     return this.httpClient.get<any>(dataURL).pipe
     (retry(1),
     catchError(this.handleError)
