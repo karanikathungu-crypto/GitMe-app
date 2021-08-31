@@ -9,8 +9,6 @@
 export const environment = {
   production: false,
   // AuthorizationDetails: AuthorizationDetails,
-   CLIENT_ID :"9d6e34a20c22203f33c7",
-   CLIENT_SECRET :"f9e4a4eb82ff60e56cffc4d68c159b79ebabc3df"
 
   // dataURL:`https://api.github.com/users/?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
   // dataURL:`https://api.github.com/users/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
