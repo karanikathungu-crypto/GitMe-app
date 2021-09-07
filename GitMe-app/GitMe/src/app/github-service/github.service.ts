@@ -23,8 +23,8 @@ export class GithubService {
     
 
   public getUserprofile(searchQuery:any):Observable<any[]>{
-    const CLIENT_ID = "9d6e34a20c22203f33c7";
-    const CLIENT_SECRET = "f9e4a4eb82ff60e56cffc4d68c159b79ebabc3df"
+    const CLIENT_ID;
+    const CLIENT_SECRET;
     let dataURL = `https://api.github.com/users/${searchQuery}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
     return this.httpClient.get<any>(dataURL).pipe
     (retry(1),
@@ -33,8 +33,8 @@ export class GithubService {
   }
 
   public getRepositories(searchQuery:any):Observable<any[]>{
-    const CLIENT_ID = "9d6e34a20c22203f33c7";
-    const CLIENT_SECRET = "f9e4a4eb82ff60e56cffc4d68c159b79ebabc3df"
+     const CLIENT_ID;
+    const CLIENT_SECRET;
     let dataURL = `https://api.github.com/users/${searchQuery}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
     return this.httpClient.get<any>(dataURL).pipe
     (retry(1),
